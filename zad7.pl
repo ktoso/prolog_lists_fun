@@ -16,4 +16,15 @@ znaczy(8,osiem).  znaczy(9,dziewiec).
 
 % impl
 
+% as word
+as_w(N. W) :-
+  arg(W, znaczy, N).
 
+% as number
+%as_n(W) :-
+%  arg(1, )
+
+przeloz([], []) :- true,!.
+przeloz([HN|N], [HW,W]) :-
+  znaczy(HN, HW),
+  przeloz(N, W).
