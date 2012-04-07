@@ -25,6 +25,6 @@ as_w(N. W) :-
 %  arg(1, )
 
 przeloz([], []) :- true,!.
-przeloz([HN|N], [HW,W]) :-
+przeloz([HN|N], [HW|W]) :-
   znaczy(HN, HW),
   przeloz(N, W).
