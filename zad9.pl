@@ -39,5 +39,6 @@
 podziel([], [], []).
 podziel(In, L, R) :-
   append(L, R, In),
-  length(L, Len),
-  length(R, Len).
+  length(L, LenL),
+  length(R, LenR),
+  (LenL+1 =:= LenR,!; LenL =:= LenR,!).
