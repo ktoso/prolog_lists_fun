@@ -11,6 +11,5 @@ sklej([X|L1],L2,[X|L3]) :-
 
 % impl
 
-remove_first_3(L) :-
-  sklej(L,[],[Drop1,Drop2,Drop3|L1]),
-  write('result: '),write(L1),nl.
+remove_first_3(L, L1) :-
+  sklej(L,[],[Drop1,Drop2,Drop3|L1]).

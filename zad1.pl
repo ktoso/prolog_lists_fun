@@ -11,9 +11,8 @@ sklej([X|L1],L2,[X|L3]) :-
 
 % impl
 
-remove_last_3(L) :-
+remove_last_3(L, L1) :-
   odwroc(L, R),
   sklej(R,[],[Drop1,Drop2,Drop3|RevTail]),
-  odwroc(RevTail, L1),
-  write('result: '),write(L1),nl.
+  odwroc(RevTail, L1).
 

@@ -22,9 +22,6 @@ remove_first_3(L, L1) :-
 
 % impl
 
-remove_both_ends_3(L) :-
-  remove_both_ends_3(L, L2).
-
 remove_both_ends_3(L, L2) :-
   remove_first_3(L, L1),
   remove_last_3(L1, L2),
